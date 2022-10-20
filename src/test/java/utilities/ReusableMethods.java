@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ReusableMethods extends TestBaseRapor {
+public class ReusableMethods  {
 
 
     static Faker faker;
@@ -191,22 +191,22 @@ public class ReusableMethods extends TestBaseRapor {
 
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
-        extentTest.info("PearlyMarket sitesine gidildi");
+
         waitFor(5);
         Driver.getDriver().findElement(By.xpath("(//span[normalize-space()='Sign In'])[1]")).click();
 
-        extentTest.info("Sign In butonuna tiklandi");
+
         waitFor(15);
         Driver.getDriver().findElement(By.xpath("(//input[@id='username'])[1]")).sendKeys(ConfigReader.getProperty("pearlyEmail"));
 
-        extentTest.info("Gecerli mail yazildi");
+
         Driver.getDriver().findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys(ConfigReader.getProperty("pearlyPassword"));
 
-        extentTest.info("Gecerli password yazildi");
+
         waitFor(5);
         Driver.getDriver().findElement(By.xpath("//button[@name='login']")).click();
 
-        extentTest.info("Basarili bir sekilde login olundu");
+
         waitFor(15);
 
 
@@ -218,25 +218,25 @@ public class ReusableMethods extends TestBaseRapor {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
-        extentTest.info("PearlyMarket sitesine gidildi");
+
 
         Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Sign In']")).click();
         ReusableMethods.waitFor(5);
 
-        extentTest.info("Sign In butonuna tiklandi");
+
         WebElement user = Driver.getDriver().findElement(By.xpath("//input[@id='username']"));
         user.sendKeys("testngteam06@hotmail.com");
-        extentTest.info("Gecerli mail yazildi");
+
         WebElement pas = Driver.getDriver().findElement(By.xpath("//input[@id='password']"));
         pas.sendKeys("Batch81");
-        extentTest.info("Gecerli password yazildi");
+
 
 
         ReusableMethods.waitFor(3);
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         WebElement sing = Driver.getDriver().findElement(By.xpath("//button[@name='login']"));
-        extentTest.info("Basarili bir sekilde login olundu");
+
 
         try {
             sing.click();
@@ -252,11 +252,11 @@ public class ReusableMethods extends TestBaseRapor {
         ReusableMethods.waitFor(2);
         WebElement account = Driver.getDriver().findElement(By.xpath("//a[contains(text(),'My Account')]"));
         js.executeScript("arguments[0].click();", account);
-        extentTest.info("My account butonuna basildi");
+
 
         Driver.getDriver().findElement(By.xpath("//a[normalize-space()='Store Manager']")).click();
 
-        extentTest.info("Store Manager butonuna tiklandi");
+
 
     }
 }
