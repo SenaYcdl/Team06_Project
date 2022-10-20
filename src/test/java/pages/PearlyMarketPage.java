@@ -588,49 +588,46 @@ public class PearlyMarketPage {
 
 
 
-
-
-
     //Sena Yucedal
 
 
+    @FindBy(xpath = "(//span[normalize-space()='Products'])[1]")
+    public WebElement productSena;
+
+    @FindBy(xpath = "//*[text()='Add New']")
+    public WebElement addNewButtonSena;
+
+    @FindBy(xpath = "(//*[text()='Product brands'])[1]")
+    public WebElement productsBrands;
+
+    @FindBy(xpath = "//li[@class='product_cats_checklist_item checklist_item_432']")
+    public List<WebElement> brands;
 
 
+    @FindBy(xpath = "(//*[text()='SKU'])[1]")
+    public WebElement sku;
+
+    @FindBy(xpath = "//*[@id='manage_stock']")
+    public WebElement manageStock;
+
+    @FindBy(xpath = "//*[@id='stock_qty']")
+    public WebElement stockQty;
+
+    @FindBy(xpath = "//*[text()='Allow Backorders?']")
+    public WebElement allowBackorders;
 
 
+    @FindBy(xpath = "//*[text()='Do not Allow']")
+    public WebElement doNotAllow;
 
+    @FindBy(xpath = "//*[text()='Allow, but notify customer']")
+    public WebElement allowButNotifyCustomer;
 
+    @FindBy(xpath = "//*[text()='Allow']")
+    public WebElement allow;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//*[text()='Sold Individually'])[1]")
+    public WebElement soldIndividually;
 
 
 
