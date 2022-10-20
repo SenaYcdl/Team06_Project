@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.util.List;
-
 
 public class PearlyMarketPage {
 
@@ -591,63 +589,6 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Sena Yucedal
 
 
@@ -855,14 +796,7 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
     //Zafer Tapikara
-
-
-
 
 
 
@@ -1260,8 +1194,6 @@ public class PearlyMarketPage {
 
 
 
-
-
     //Nurullah Karakose
 
 
@@ -1450,11 +1382,7 @@ public class PearlyMarketPage {
 
 
 
-
-
     //Yusuf Demir
-
-
 
 
 
@@ -1936,11 +1864,7 @@ public class PearlyMarketPage {
 
 
 
-
-
     //Mehmet Duman
-
-
 
 
 
