@@ -121,7 +121,7 @@ public class US05_06_07_08 extends TestBaseRapor {
 
         //Urun fotografi eklenebilmeli
 
-        extentTest = extentReports.createTest("US_005 TC04", "Urun fotografi eklenebilmeli");
+        extentTest = extentReports.createTest("US_005 TC04", "Urun fotografi eklenebilmeli.");
         js.executeScript("arguments[0].click();", pearly.addfoto);
         pearly.selectfile.click();
         ReusableMethods.waitFor(3);
