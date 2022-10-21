@@ -5,7 +5,7 @@
 <hr/>
 
 https://pearlymarket.com/ sitesinin testlerini yaptığımız bu projemizde TestNG framework ile çalıştık.
-OOP concept i uygulayarak page object model framework design kullanılmıştır.
+OOP concept i uygulayarak page object model framework designi kullandik.
 
 <br/>
 
