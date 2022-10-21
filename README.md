@@ -16,10 +16,20 @@ kullandık.Locatelerimizi call yapmak için FindBy notasyonu ile locatelerimizi 
 
 ### utilities package <br/>
 Bu package da bize sürekli lazım olan classlarımız ve methodlarımız yer almaktadır.
+Driver,ConfigReader,ReusableMethods,TestBaseRapor,vs... 
 
 ### configuration.properties <br/>
 Bu properties dosyamızda sürekli kullandığımız variablelar bulunmaktadır. Bu dosyada key=value
 olarak olusturduğumuz variableları başka classlara çağırabilmek için utilities packagedan 
 ConfigReader classı içindeki method sayesinde bilgileri istediğimiz class a call ederiz.
+
+### pom.xml <br/>
+Projemizi build ettigimiz bu dosyada kullanabilcegimiz kodlarin kütüphanesi yer almaktadır.
+
+### Kullanilan Testler
+#### EndtoEnd Test
+#### Smoke Test
+#### Negative Smoke Test
+
 
 
