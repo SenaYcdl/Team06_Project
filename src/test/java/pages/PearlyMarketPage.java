@@ -1866,18 +1866,26 @@ public class PearlyMarketPage {
     //Mehmet Duman
 
 
+@FindBy(xpath = "(//span[@class='text'])[14]")
+    public WebElement reportsButton;
 
+    @FindBy(xpath = "//*[text()='Year']")
+    public WebElement yearReportButton;
 
+    @FindBy(xpath = "//*[text()='Last Month']")
+    public WebElement lastmonthReportButton;
 
+    @FindBy(xpath = "(//*[text()='This Month'])[1]")
+    public WebElement thismonthReportButton;
 
+    @FindBy(xpath = "//*[text()='Last 7 Days']")
+    public WebElement last7daysReportButton;
 
+    @FindBy(xpath = "//*[@class=\"wcfm-date-range\"]")
+    public WebElement choosedateReportButton;
 
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@id=\"chart-placeholder-canvas\"]")
+    public WebElement choosedateReportTable;
 
 
 
