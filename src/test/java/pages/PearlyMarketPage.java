@@ -986,6 +986,52 @@ public class PearlyMarketPage {
 
     //Zeynep Sarikaya
 
+    @FindBy (xpath = "(//*[text()='Sign In'])[1]")
+    public WebElement signInn;
+    @FindBy (xpath = "//*[@id='username']")
+    public WebElement userName;
+    @FindBy (xpath = "//*[@id='password']")
+    public WebElement password;
+    @FindBy (xpath = "//*[@name='login']")
+    public WebElement login;
+    @FindBy (xpath = "(//*[text()='My Account'])[2]")
+    public WebElement myAccount;
+    @FindBy (xpath = "//*[text()='Store Manager']")
+    public WebElement storeManager;
+    @FindBy (xpath = "(//*[@class='wcfm_menu_item '])[4]")
+    public WebElement orders;
+    @FindBy (xpath = "//*[@id='wcfm-orders_info']")
+    public WebElement resultOrders;
+    @FindBy (xpath = "(//*[@class='text'])[4]")
+    public WebElement products;
+    @FindBy (xpath = "//*[text()='20.00']")
+    public WebElement discount;
+    @FindBy (xpath = "(//*[@style='text-align:left;'])[1]")
+    public WebElement billingAddress;
+    @FindBy (xpath = "(//*[@style='text-align:left;'])[2]")
+    public WebElement shippingAddress;
+    @FindBy (xpath = "//*[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account']")
+    public WebElement accountDetails;
+    @FindBy (xpath = "//*[@id='account_first_name']")
+    public WebElement firstName;
+    @FindBy (xpath = "//*[@id='account_last_name']")
+    public WebElement lastName;
+    @FindBy (xpath = "//*[@id='account_display_name']")
+    public WebElement displayName;
+    @FindBy (xpath = "//*[@id='account_email']")
+    public WebElement accountDetailsEmail;
+    @FindBy (xpath = "//*[@name='save_account_details']")
+    public WebElement saveChanges;
+    @FindBy (xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-coupons']")
+    public WebElement coupons;
+    @FindBy (xpath = "(//*[@class='text'])[18]")
+    public WebElement couponAddNew;
+    @FindBy (xpath = "//*[@id='title']")
+    public WebElement code;
+    @FindBy (xpath = "(//*[@class='wcfm-checkbox wcfm_ele'])[1]")
+    public WebElement freeShipping;
+    @FindBy (xpath = "//*[@id='show_on_store']")
+    public WebElement showOnStore;
 
 
 
