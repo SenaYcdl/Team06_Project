@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 import pages.PearlyMarketPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 
-
-public class US007_Test {
+public class US007_Test extends TestBaseRapor {
 
 
     PearlyMarketPage pearly = new PearlyMarketPage();
@@ -26,12 +26,18 @@ public class US007_Test {
 
         //TC001
 
+        extentTest= extentReports.createTest("US007","Kullanici valid degerleele giris yapabilmeli ve " +
+                "store nanager sayfasina gidebilmeli");
         ReusableMethods.storeManager();
+        extentTest.info("Store maneger sayfasina gidildi.");
         pearly.productSena.click();
+        extentTest.info("Product a click yapildi");
         pearly.addNewButtonSena.click();
+        extentTest.info("Add new butonuna click yapildi");
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
 
         Assert.assertTrue(pearly.productsBrands.isDisplayed());
+        extentTest.info("Product brands kategorisinin gorunurlugu dogrulandi");
 
         for (WebElement w : pearly.brands) {
             Assert.assertTrue(w.isDisplayed());
@@ -45,6 +51,7 @@ public class US007_Test {
 
         ReusableMethods.waitFor(2);
         Driver.closeDriver();
+        extentTest.pass("Sayfa basarili sekilde kapatildi.");
     }
 }
 
