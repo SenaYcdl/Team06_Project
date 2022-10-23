@@ -41,10 +41,10 @@ public class US013_Test extends TestBaseRapor {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         try {
-            pearlyPage.myAccount.click();
+            pearlyPage.myAccountt.click();
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
-            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccount));
-            pearlyPage.myAccount.click();
+            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccountt));
+            pearlyPage.myAccountt.click();
         }
         pearlyPage.storeManager.click();
         ReusableMethods.waitFor(3);

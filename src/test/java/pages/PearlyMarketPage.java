@@ -991,15 +991,15 @@ public class PearlyMarketPage {
     @FindBy (xpath = "//*[@id='username']")
     public WebElement userName;
     @FindBy (xpath = "//*[@id='password']")
-    public WebElement password;
+    public WebElement passwordd;
     @FindBy (xpath = "//*[@name='login']")
     public WebElement login;
     @FindBy (xpath = "(//*[text()='My Account'])[2]")
-    public WebElement myAccount;
+    public WebElement myAccountt;
     @FindBy (xpath = "//*[text()='Store Manager']")
     public WebElement storeManager;
     @FindBy (xpath = "(//*[@class='wcfm_menu_item '])[4]")
-    public WebElement orders;
+    public WebElement orderss;
     @FindBy (xpath = "//*[@id='wcfm-orders_info']")
     public WebElement resultOrders;
     @FindBy (xpath = "(//*[@class='text'])[4]")
@@ -1013,7 +1013,7 @@ public class PearlyMarketPage {
     @FindBy (xpath = "//*[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account']")
     public WebElement accountDetails;
     @FindBy (xpath = "//*[@id='account_first_name']")
-    public WebElement firstName;
+    public WebElement firstNamee;
     @FindBy (xpath = "//*[@id='account_last_name']")
     public WebElement lastName;
     @FindBy (xpath = "//*[@id='account_display_name']")

@@ -35,13 +35,13 @@ public class US012_Test extends TestBaseRapor {
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         try {
-            pearlyPage.myAccount.click();
+            pearlyPage.myAccountt.click();
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
-            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccount));
-            pearlyPage.myAccount.click();
+            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccountt));
+            pearlyPage.myAccountt.click();
         }
         pearlyPage.storeManager.click();
-        pearlyPage.orders.click();
+        pearlyPage.orderss.click();
 
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ReusableMethods.waitFor(10);
@@ -86,15 +86,15 @@ public class US012_Test extends TestBaseRapor {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         try {
-            pearlyPage.myAccount.click();
+            pearlyPage.myAccountt.click();
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
-            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccount));
-            pearlyPage.myAccount.click();
+            wait.until(ExpectedConditions.visibilityOf(pearlyPage.myAccountt));
+            pearlyPage.myAccountt.click();
         }
 
         pearlyPage.accountDetails.click();
 
-        Assert.assertTrue(pearlyPage.firstName.isDisplayed()&&pearlyPage.lastName.isDisplayed()&&
+        Assert.assertTrue(pearlyPage.firstNamee.isDisplayed()&&pearlyPage.lastName.isDisplayed()&&
                 pearlyPage.displayName.isDisplayed()&&pearlyPage.accountDetailsEmail.isDisplayed()&&
                 pearlyPage.saveChanges.isDisplayed());
         extentTest.info("Hesap detaylari; hesap bilgisi ve eposta adresi goruntulenmeli ve update edilebilir oldugu test edildi");
