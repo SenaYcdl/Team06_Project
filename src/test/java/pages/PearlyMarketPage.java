@@ -1351,6 +1351,65 @@ public class PearlyMarketPage {
 
     //Nurullah Karakose
 
+    @FindBy (xpath = "//*[text()='Sign In']")
+    public WebElement signInButton;
+
+    @FindBy (xpath = "//*[@id='username']")
+    public WebElement userNameBox;
+
+    @FindBy (xpath = "//*[@id='password']")
+    public WebElement passwordBox;
+
+    @FindBy (xpath = "//*[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1079']")
+    public WebElement myAccountButton;
+
+    @FindBy (xpath = "//*[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--wcfm-store-manager']")
+    public WebElement storeManagerButton;
+
+    @FindBy (xpath = "//*[@class='wcfmfa fa-gift']")
+    public WebElement couponsButton;
+
+    @FindBy (xpath = "(//*[@class='wcfmfa fa-gift'])[3]")
+    public WebElement addNewButton;
+
+    @FindBy ( xpath = "//*[@id='minimum_amount']")
+    public WebElement minimumSpendBox;
+
+    @FindBy ( xpath = "//*[@id='maximum_amount']")
+    public WebElement maximumSpendBox;
+
+    @FindBy ( xpath = "//*[@id='individual_use']")
+    public WebElement individualUseOnlyCheckBox;
+
+    @FindBy ( xpath = "(//*[@class='wcfm-checkbox wcfm_ele'])[4]")
+    public WebElement excludeSaleItemsBox;
+
+    @FindBy ( xpath = "(//*[@class='select2-search__field'])[4]")
+    public WebElement excludeCategoriesBox;
+
+    @FindBy (xpath = "//*[@id='select2-exclude_product_categories-result-euj7-393']")
+    public WebElement forMenButton;
+
+    @FindBy (css = "[class='wcfm-message wcfm-success']")
+    public WebElement succesfullyMessage;
+
+    @FindBy (xpath = "(//*[@class='wcfm-text wcfm_ele'])[1]")
+    public WebElement codeBox;
+
+    @FindBy (xpath = "//*[@class='wcfm-textarea wcfm_ele']")
+    public WebElement descriptionBox;
+
+    @FindBy (xpath = "//*[@id='coupons_manage_limit']")
+    public WebElement limitButton;
+
+    @FindBy (xpath = "(//*[text()='Usage limit per coupon'])[1]")
+    public WebElement usageLimitText;
+
+    @FindBy (xpath = "//*[@id='limit_usage_to_x_items']")
+    public WebElement usageLimitBox;
+
+    @FindBy (xpath = "//*[@id='usage_limit_per_user']")
+    public WebElement userLimitBox;
 
 
 
