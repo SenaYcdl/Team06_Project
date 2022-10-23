@@ -799,25 +799,6 @@ public class PearlyMarketPage {
 
 
 
-    @FindBy(xpath = "//input[@id='weight']")
-    public WebElement weight;
-
-    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[2]")
-    public WebElement length;
-
-    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[3]")
-    public WebElement width;
-
-    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[4]")
-    public WebElement height;
-
-    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
-    public WebElement attributes;
-
-
-
-    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
-    public WebElement shipping;
 
 
 
@@ -897,7 +878,7 @@ public class PearlyMarketPage {
     //Zafer Tapikara
 
     @FindBy(xpath = "(//span[@class='wcfmfa fa-cube'])[1]")
-    public WebElement products;
+    public WebElement productsSekme;
 
     @FindBy(xpath = "//span[text()='Products']")
     public WebElement productsWait;
@@ -910,6 +891,25 @@ public class PearlyMarketPage {
 
 
 
+    @FindBy(xpath = "//input[@id='weight']")
+    public WebElement weight;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[2]")
+    public WebElement length;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[3]")
+    public WebElement width;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[4]")
+    public WebElement height;
+
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
+    public WebElement attributes;
+
+
+
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
+    public WebElement shipping;
 
 
 
@@ -1113,7 +1113,7 @@ public class PearlyMarketPage {
     @FindBy (xpath = "//*[@id='wcfm-orders_info']")
     public WebElement resultOrders;
     @FindBy (xpath = "(//*[@class='text'])[4]")
-    public WebElement productsSekme;
+    public WebElement products;
     @FindBy (xpath = "//*[text()='20.00']")
     public WebElement discount;
     @FindBy (xpath = "(//*[@style='text-align:left;'])[1]")

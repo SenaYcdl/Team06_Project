@@ -136,7 +136,7 @@ public class US009_Test  {
         Assert.assertEquals(pearly.width.getAttribute("value"), "5");
         Assert.assertEquals(pearly.height.getAttribute("value"), "15");
         //degerlerin dogrulugunu kontrol eder
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(5);
         Driver.closeDriver();
     }
 }
