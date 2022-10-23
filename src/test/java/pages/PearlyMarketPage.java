@@ -513,8 +513,7 @@ public class PearlyMarketPage {
 
     //Nida Yucedal
 
-    @FindBy(xpath = "//span[normalize-space()='Register']")
-    public WebElement register;
+
 
     @FindBy(xpath = "//span[normalize-space()='Sign In']")
     public WebElement signIn;
@@ -578,18 +577,6 @@ public class PearlyMarketPage {
     @FindBy(xpath = "//button[@id='__wp-uploader-id-1']")
     public WebElement selectfile;
 
-    @FindBy(xpath = "//strong[normalize-space()='Short Description']")
-    public WebElement shortDescrip;
-
-    @FindBy(xpath = "//p[@class='description wcfm_title wcfm_full_ele wcfm_wpeditor']//strong[contains(text(),'Description')]")
-    public WebElement description;
-
-    @FindBy(xpath = "//iframe[@id='excerpt_ifr']")
-    public WebElement iframe;
-
-    @FindBy(xpath = "//iframe[@id='description_ifr']")
-    public WebElement iframe2;
-
     @FindBy(xpath = "//button[normalize-space()='Select']")
     public WebElement addproductSelect;
 
@@ -630,20 +617,10 @@ public class PearlyMarketPage {
     @FindBy(xpath = "(//*[text()='Description'])[1]")
     public WebElement descriptionVisible;
 
-    @FindBy(xpath = "//input[@id='user_email']")
-    public WebElement email;
 
-    @FindBy(xpath = "(//*[@href='https://pearlymarket.com/vendor-register/'])[2]")
-    public WebElement becomeVendor;
 
-    @FindBy(xpath ="//*[@id='passoword']")
-    public WebElement password2;
 
-    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
-    public WebElement girisYapilamadi;
 
-    @FindBy(xpath = "//*[text()='Sign In']")
-    public WebElement signn;
 
 
 
