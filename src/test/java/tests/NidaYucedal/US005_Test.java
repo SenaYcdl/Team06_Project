@@ -247,45 +247,45 @@ public class US005_Test extends TestBaseRapor {
         js.executeScript("arguments[0].click();", pearly.amazonBasic);
         Thread.sleep(200);
 
-     //  extentTest.info("US008 TC01 SKU,manageStock,stockQty gorulebildi. ");
-     //  Assert.assertTrue(pearly.sku.isDisplayed());
-     //  ReusableMethods.waitFor(3);
-     //  js.executeScript("arguments[0].click();", pearly.sku);
-     //  js.executeScript("arguments[0].click();", pearly.manageStock);
-     //  ReusableMethods.waitFor(3);
-     //  pearly.stockQty.click();
-     //  pearly.stockQty.clear();
-     //  pearly.stockQty.sendKeys("15", Keys.ENTER);
-     //  ReusableMethods.waitFor(5);
+       extentTest.info("US008 TC01 SKU,manageStock,stockQty gorulebildi. ");
+       Assert.assertTrue(pearly.sku.isDisplayed());
+       ReusableMethods.waitFor(3);
+       js.executeScript("arguments[0].click();", pearly.sku);
+       js.executeScript("arguments[0].click();", pearly.manageStock);
+       ReusableMethods.waitFor(3);
+       pearly.stockQty.click();
+       pearly.stockQty.clear();
+       pearly.stockQty.sendKeys("15", Keys.ENTER);
+       ReusableMethods.waitFor(5);
 
-     //  System.out.println(pearly.stockQty.getText());
-     //  Assert.assertTrue(pearly.stockQty.isDisplayed());
-     //  ReusableMethods.waitFor(5);
-
-
-     //  js.executeScript("arguments[0].click();", pearly.allowBackorders);
-     //  Assert.assertTrue(pearly.allowBackorders.isDisplayed());
-     //  ReusableMethods.waitFor(3);
-
-     //  if (!pearly.allow.isSelected()) {
-     //      pearly.allow.click();
-     //  }
-
-     //  if (!pearly.allowButNotifyCustomer.isSelected()) {
-     //      pearly.allowButNotifyCustomer.click();
-     //  }
-
-     //  if (!pearly.doNotAllow.isSelected()) {
-     //      pearly.doNotAllow.click();
-     //  }
+       System.out.println(pearly.stockQty.getText());
+       Assert.assertTrue(pearly.stockQty.isDisplayed());
+       ReusableMethods.waitFor(5);
 
 
-     //  ReusableMethods.waitFor(3);
-     //  Assert.assertTrue(pearly.soldIndividually.isDisplayed());
+       js.executeScript("arguments[0].click();", pearly.allowBackorders);
+       Assert.assertTrue(pearly.allowBackorders.isDisplayed());
+       ReusableMethods.waitFor(3);
+
+       if (!pearly.allow.isSelected()) {
+           pearly.allow.click();
+       }
+
+       if (!pearly.allowButNotifyCustomer.isSelected()) {
+           pearly.allowButNotifyCustomer.click();
+       }
+
+       if (!pearly.doNotAllow.isSelected()) {
+           pearly.doNotAllow.click();
+       }
 
 
-     //  js.executeScript("arguments[0].scrollIntoView(true);", pearly.submit);
-     //  js.executeScript("arguments[0].click();", pearly.submit);
+       ReusableMethods.waitFor(3);
+       Assert.assertTrue(pearly.soldIndividually.isDisplayed());
+
+
+       js.executeScript("arguments[0].scrollIntoView(true);", pearly.submit);
+       js.executeScript("arguments[0].click();", pearly.submit);
 
         extentTest.info("Kullanici secilen urunlerin brandlerini belirleyebildi");
         extentTest.pass("US_008 TC02 PASSED");
