@@ -875,17 +875,41 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
-
-
     //Zafer Tapikara
 
+    @FindBy(xpath = "(//span[@class='wcfmfa fa-cube'])[1]")
+    public WebElement productsSekme;
+
+    @FindBy(xpath = "//span[text()='Products']")
+    public WebElement productsWait;
+
+    @FindBy(xpath = "//span[text()='Sign Out']")
+    public WebElement signout;
+
+    @FindBy(xpath = "(//*[text()='Hope Cup'])[2]")
+    public WebElement hopeCup;
 
 
 
+    @FindBy(xpath = "//input[@id='weight']")
+    public WebElement weight;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[2]")
+    public WebElement length;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[3]")
+    public WebElement width;
+
+    @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[4]")
+    public WebElement height;
+
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
+    public WebElement attributes;
+
+
+
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
+    public WebElement shipping;
 
 
 
