@@ -10,15 +10,124 @@ import java.util.List;
 
 public class PearlyMarketPage {
 
-    public PearlyMarketPage(){
+    public PearlyMarketPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-
 
 
     //Tugba Gunes
 
+    @FindBy(xpath = "//*[@class='register inline-type']")
+    public WebElement register;
+    @FindBy(xpath = "(//*[@href='https://pearlymarket.com/vendor-register/'])[2]")
+    public WebElement becomeVendor;
+    @FindBy(xpath = "//*[@id='user_email']")
+    public WebElement email;
+    @FindBy(xpath = "//*[@id='passoword']")
+    public WebElement password;
+    @FindBy(xpath = "//*[@name='password_strength']")
+    public WebElement strongSifre;
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
+    public WebElement girisYapilamadi;
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement signİn;
+    //US002
+    @FindBy(xpath = "//*[@class='woocommerce-Input woocommerce-Input--text input-text']")
+    public WebElement signİnEmail;
+    @FindBy(xpath = "//*[@autocomplete='current-password']")
+    public WebElement signİnPassword;
+    @FindBy(xpath = "//*[@class='woocommerce-button button woocommerce-form-login__submit']")
+    public WebElement signİnButton;
+    @FindBy(xpath = "//*[text()='Sign Out']")
+    public WebElement signOut;
+
+    @FindBy(xpath = "(//*[text()='My Account'])[3]")
+    public WebElement myAccount;
+
+    @FindBy(css = ".woocommerce-MyAccount-navigation")
+    public List<WebElement> dashboardList;
+    @FindBy(xpath = "(//span[normalize-space()='Register'])[1]")
+    public WebElement pearlyRegister;
+
+    @FindBy(xpath = "(//*[@id='reg_username'])[1]")
+    public WebElement pearlyRegisterUsername;
+
+    @FindBy(xpath = "(//*[@id='reg_email'])[1]")
+    public WebElement pearlyRegisterMail;
+
+    @FindBy(xpath = "(//*[@id='reg_password'])[1]")
+    public WebElement registerPassword;
+
+    @FindBy(xpath = "(//*[@class='woocommerce-Button woocommerce-button button woocommerce-form-register__submit'])[1]")
+    public WebElement registerSignUp;
+
+    @FindBy(xpath = "//*[text()='Become a Vendor']")
+    public WebElement becomeAVendor;
+
+    //register sonrasi become a vendor kismi
+    @FindBy(xpath = "//*[@id='user_email']")
+    public WebElement userEmail;
+
+    @FindBy(xpath = "//*[@id='confirm_pwd']")
+    public WebElement confirmPass;
+
+    @FindBy(xpath = "//*[@id='wcfm_membership_register_button']")
+    public WebElement registerButton;
+
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+    public WebElement wrongEmail;
+
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+    public WebElement errorEmail;
+
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+    public WebElement strongPasswordMessage;
+
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-success']")
+    public WebElement successEmailMessage;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
+    public WebElement atleastGood;
+
+    @FindBy(xpath = "//*[@id='password_strength']")
+    public WebElement goodPassword;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
+    public WebElement NotSamePass;
+    @FindBy(xpath = "(//*[text()='Orders'])[1]")
+    public WebElement orders;
+
+    @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded btn-icon-right continue-shopping mb-4 mt-6']")
+    public WebElement goShop;
+
+    @FindBy(css = ".products.row.cols-lg-3.cols-md-3")
+    public List<WebElement> urunList;
+
+    @FindBy(css = ".product-details>h3>a")
+    public List<WebElement> conList;
+
+
+    @FindBy(xpath = "//*[@name='add-to-cart']")
+    public WebElement sepeteEkle;
+
+    @FindBy(xpath = "(//*[@class='cart-count'])[1]")
+    public WebElement sepetCount;
+
+    @FindBy(xpath = "//*[@class='cart-toggle']")
+    public WebElement cart;
+
+    @FindBy(xpath = "//*[@class='button wc-forward']")
+    public WebElement viewCart;
+
+    @FindBy(xpath = "(//*[text()='Checkout'])[2]")
+    public WebElement checkout;
+
+    @FindBy(css = "#billing_first_name")
+    public WebElement firstName;
 
 
 
