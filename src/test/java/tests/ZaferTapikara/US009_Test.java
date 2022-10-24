@@ -18,11 +18,12 @@ public class US009_Test  {
     PearlyMarketPage pearly;
     Actions actions;
     WebDriverWait wait;
-    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    JavascriptExecutor js;
 
     @Test
     public void US009_TC001()  {
         //Urun kilosu belirlenebilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
@@ -54,7 +55,9 @@ public class US009_Test  {
         // Product sayfasi acilana kadar bekler
         ReusableMethods.waitFor(5);
         //ürünler listesindeki "Hope Cup" ürününün ismine tiklar
-        js.executeScript("arguments[0].scrollIntoView(true);", pearly.hopeCup);
+        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(2);
+
         js.executeScript("arguments[0].click()", pearly.hopeCup);
         ReusableMethods.waitFor(2);
         //Sayfasinin altindaki shipping sekmesine tiklar
@@ -75,6 +78,7 @@ public class US009_Test  {
     @Test
     public void US009_TC002() {
         //Urun olculeri belirlenebilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
@@ -97,7 +101,7 @@ public class US009_Test  {
         pearly.myaccount.sendKeys(Keys.ENTER);
         // Store manager linki gorunene kadar bekler
         ReusableMethods.waitForVisibility(pearly.storemanager, 10);
-        //"Store Manager" sekmesine tiklar
+        //"Store Manager" sekmesine tiklar.
         pearly.storemanager.click();
         // Products linki gorunene kadar bekler
         ReusableMethods.waitForVisibility(pearly.productsSekme, 10);
@@ -135,6 +139,7 @@ public class US009_Test  {
     @Test
     public void US009_TC003() {
         // islem suresi belirlenebilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
