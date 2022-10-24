@@ -61,5 +61,6 @@ public class US020_Test extends TestBaseRapor {
         Assert.assertTrue(pearlyPage.reviewTable.isDisplayed());
         extentTest.info(" Verdigi rate ve comment tarihi tanımlanmalı");
         extentTest.pass("US_020 TC_002 PASSED");
+
     }
 }
