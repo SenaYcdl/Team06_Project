@@ -1539,25 +1539,42 @@ public class PearlyMarketPage {
 
     //Yusuf Demir
 
+    @FindBy (xpath = "//div[@data-id='b1b2804']//div[@class='elementor-widget-container']")
+    public WebElement enAltaInme; // Sayfanın en altına iner
+
+    @FindBy (xpath = "//span[contains(text(),'Customers')]")
+    public WebElement customers;
+
+    @FindBy (xpath = "//tbody//tr//td")
+    public List<WebElement> musteriBilgileri;
 
 
+    @FindBy (xpath = "//span[text()='PDF']")
+    public WebElement pdfDownload;
 
+    @FindBy (xpath = "//span[text()='Excel']")
+    public WebElement excelDownload;
 
+    @FindBy (xpath = "//span[text()='CSV']")
+    public WebElement csvDownload;
 
+    @FindBy (xpath = "//span[contains(text(),'Add New')]")
+    public WebElement addNew; // Musteri ekleme butonu
 
+    @FindBy (css = "[class='wcfm-message wcfm-success']")
+    public WebElement kaydedildiYazisi;
 
+    @FindBy (xpath = "//a[text()='My Account']")
+    public WebElement myAccount2;
 
+    @FindBy (css = "[id='user_name']")
+    public WebElement userNameCustomer;
 
+    @FindBy (css = "[id='same_as_billing']")
+    public WebElement sameAsBilling;
 
-
-
-
-
-
-
-
-
-
+    @FindBy (css = "[id='sfirst_name']")
+    public WebElement shippingFirstName;
 
 
 
