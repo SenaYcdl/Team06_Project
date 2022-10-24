@@ -1,5 +1,6 @@
 package tests.FilizYilmaz;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,37 +22,52 @@ public class US004_Test {
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
     @Test
-    public void TC00() {
+    public void TC00() throws InterruptedException {
 
 
-        Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
-
-        pearly.signIn.click();
+        ReusableMethods.signIn();
+        ReusableMethods.waitFor(3);
+        ReusableMethods.getActions().sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
+        WebElement myAccount = Driver.getDriver().findElement(By.xpath("//a[contains(text(),'My Account')]"));
+        js.executeScript("arguments[0].click();", myAccount);
         ReusableMethods.waitFor(5);
-
-        pearly.username.sendKeys("testngteam06@hotmail.com");
-        pearly.signPass.sendKeys("Batch81");
+        WebElement orders = Driver.getDriver().findElement(By.xpath("(//p[@class='text-uppercase text-center mb-0'])[1]"));
+        js.executeScript("arguments[0].click();", orders);
+        ReusableMethods.getActions().sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(2);
+        pearly.goShop.click();
+        Faker faker = new Faker();
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        for (int i = 0; i < pearly.conList.size(); i++) {
+            Thread.sleep(2000);
+            js.executeScript("arguments[0].click();", pearly.conList.get(i));
+            // ReusableMethods.jsScrollClick(pearly.conList.get(i));
+            Thread.sleep(1000);
+            try {
+                if (pearly.sepeteEkle.isDisplayed()) {
+                    pearly.sepeteEkle.click();
+                    Thread.sleep(2000);
+                    Driver.getDriver().navigate().back();
+                    Driver.getDriver().navigate().back();
+                } else
+                    Driver.getDriver().navigate().back();
+            } catch (Exception e) {
+                Driver.getDriver().navigate().back();
+            }
 
-        try {
-            pearly.signlog.click();
-        } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
-            wait.until(ExpectedConditions.visibilityOf(pearly.signlog));
-            pearly.signlog.click();
+            int count = Integer.parseInt(pearly.sepetCount.getText());
+            if (count == 5) {
+                break;
+            }
+
+            WebElement sepet = Driver.getDriver().findElement(By.xpath("//a[@class='cart-toggle']//i[@class='w-icon-cart']"));
+            js.executeScript("arguments[0].click();", sepet);
+            WebElement viewcart = Driver.getDriver().findElement(By.xpath("(//a[normalize-space()='View cart'])[1]"));
+            ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", viewcart);
+            js.executeScript("arguments[0].click();", viewcart);
+            ReusableMethods.waitFor(5);
 
         }
-
-        ReusableMethods.waitFor(3);
-
-        WebElement sepet = Driver.getDriver().findElement(By.xpath("//a[@class='cart-toggle']//i[@class='w-icon-cart']"));
-        js.executeScript("arguments[0].click();", sepet);
-        WebElement viewcart = Driver.getDriver().findElement(By.xpath("(//a[normalize-space()='View cart'])[1]"));
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", viewcart);
-        js.executeScript("arguments[0].click();", viewcart);
-        ReusableMethods.waitFor(5);
-
     }
 
 
