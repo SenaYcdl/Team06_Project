@@ -17,10 +17,11 @@ public class US011_Test {
     PearlyMarketPage pearly;
     Actions actions;
     WebDriverWait wait;
-    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    JavascriptExecutor js;
     @Test
     public void US011_TC001() {
         //toptan urun gosterme sekmesinde parca turleri piece, carton ve kg olmali
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
@@ -68,6 +69,7 @@ public class US011_Test {
     @Test
     public void US011_TC002() {
         //Units per piece kisminda sayi belirtebilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
@@ -120,6 +122,7 @@ public class US011_Test {
     @Test
     public void US011_TC003() {
         //Minimum order quantity miktari belirtilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());

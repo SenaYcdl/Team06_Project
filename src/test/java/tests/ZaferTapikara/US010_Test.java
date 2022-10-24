@@ -22,10 +22,11 @@ public class US010_Test {
     PearlyMarketPage pearly;
     Actions actions;
     WebDriverWait wait;
-    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    JavascriptExecutor js;
     @Test
     public void US010_TC001() {
         //Renk secenegi;blue, brown, green ve gray renkleri belirtilmeli
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
@@ -87,6 +88,7 @@ public class US010_Test {
     @Test
     public void US010_TC002() {
         //Size secenegi; small, medium, large, extra large olmali
+        js = (JavascriptExecutor) Driver.getDriver();
         pearly = new PearlyMarketPage();
         wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         actions = new Actions(Driver.getDriver());
