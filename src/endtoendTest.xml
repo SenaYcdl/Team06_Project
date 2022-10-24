@@ -1,1 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen classlari calistirma">
+    <test name="End to End Test">
+        <classes>
+            <class name="tests.EndToEndTest.US05_06_07_08"/>
+        </classes>
+    </test>
+</suite>
