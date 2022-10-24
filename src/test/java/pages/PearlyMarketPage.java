@@ -923,7 +923,7 @@ public class PearlyMarketPage {
     @FindBy(xpath = "//span[text()='Sign Out']")
     public WebElement signout;
 
-    @FindBy(xpath = "(//*[text()='Hope Cup'])[2]")
+    @FindBy(xpath = "(//a[@href='https://pearlymarket.com/store-manager/products-manage/16113'])[2]")
     public WebElement hopeCup;
 
 

@@ -55,9 +55,7 @@ public class US009_Test  {
         // Product sayfasi acilana kadar bekler
         ReusableMethods.waitFor(5);
         //ürünler listesindeki "Hope Cup" ürününün ismine tiklar
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(2);
-
+        js.executeScript("arguments[0].scrollIntoView(true);", pearly.hopeCup);
         js.executeScript("arguments[0].click()", pearly.hopeCup);
         ReusableMethods.waitFor(2);
         //Sayfasinin altindaki shipping sekmesine tiklar
