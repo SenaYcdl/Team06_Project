@@ -48,6 +48,7 @@ public class US020_Test extends TestBaseRapor {
         extentTest.info("Kullanici bilgisi, yazmış olduğu comment");
         extentTest.pass("US_020 TC_001 PASSED");
 
+
     }
 
     @Test
