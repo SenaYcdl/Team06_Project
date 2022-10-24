@@ -14,7 +14,7 @@ Bu package da testlerini gerçekleştirdiğimiz web elementlerinin locatelerini 
 class larımız bulunmaktadır. PageFactory class ını oluşturarak driver ı çağırıp this key ini
 kullandık.Locatelerimizi call yapmak için FindBy notasyonu ile locatelerimizi oluşturduk.
 
-### utilities package <br/>
+### utilities packages <br/>
 Bu package da bize sürekli lazım olan classlarımız ve methodlarımız yer almaktadır.
 Driver,ConfigReader,ReusableMethods,TestBaseRapor,vs... 
 
