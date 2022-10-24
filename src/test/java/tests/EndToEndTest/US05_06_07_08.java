@@ -31,7 +31,7 @@ public class US05_06_07_08 extends TestBaseRapor {
         pearly.signIn.click();
         ReusableMethods.waitFor(5);
 
-        //
+
         pearly.username.sendKeys("testngteam06@hotmail.com");
         pearly.signPass.sendKeys("Batch81");
         // pearly.username.sendKeys(ConfigReader.getProperty("pearlyEmail"));
