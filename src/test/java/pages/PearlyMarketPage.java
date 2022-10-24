@@ -1119,9 +1119,16 @@ public class PearlyMarketPage {
     @FindBy (xpath = "//*[@id='show_on_store']")
     public WebElement showOnStore;
 
+    @FindBy (xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-reviews']")
+    public WebElement reviews;
+    @FindBy (xpath = "(//*[text()='Product Reviews'])[1]")
+    public WebElement productsReview;
 
+    @FindBy (xpath = "//*[@id='wcfm-reviews_info']")
+    public WebElement productsReviewResult;
 
-
+    @FindBy (xpath = "//*[@id='wcfm-reviews']")
+    public WebElement reviewTable;
 
 
 
