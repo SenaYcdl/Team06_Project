@@ -1,1 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Negative Smoke Test">
+    <test name="method">
+        <classes>
+            <class name="tests.TugbaGunes.US001_Test">
+                <methods>
+                    <include name="wrongMailControl"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
