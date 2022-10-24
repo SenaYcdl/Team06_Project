@@ -903,13 +903,50 @@ public class PearlyMarketPage {
     @FindBy(xpath = "(//input[@class='wcfm-text wcfm_ele simple variable booking'])[4]")
     public WebElement height;
 
-    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[5]")
     public WebElement attributes;
 
 
 
     @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[4]")
     public WebElement shipping;
+
+    @FindBy(xpath = "//select[@id='_wcfmmp_processing_time']")
+    public WebElement processingTimeDDM;
+
+    @FindBy(id = "attributes_is_active_1")
+    public WebElement colorCheckBox;
+
+    @FindBy(id = "attributes_is_active_2")
+    public WebElement sizeCheckBox;
+
+    @FindBy(xpath = "(//div[@class='page_collapsible_content_holder'])[9]")
+    public WebElement toptanUrunGostermeAyarlari;
+
+    @FindBy(xpath = "//span[@class='select2 select2-container select2-container--default select2-container--below select2-container--focus']")
+    public WebElement colorDropDown;
+
+    @FindBy(xpath = "//button[@class='button wcfm_add_attribute_term wcfm_select_all_attributes']")
+    public WebElement selectAll;
+
+    @FindBy(xpath = "(//button[text()='Select all'])[2]")
+    public WebElement sizeSelectAll;
+
+
+    @FindBy(css = "[value='Piece']")
+    public WebElement pieceOption;
+
+    @FindBy(css = "[value='Carton']")
+    public WebElement cartonOption;
+
+    @FindBy(css = "[value='Kg']")
+    public WebElement kgOption;
+
+    @FindBy(xpath = "//input[@id='unitpercart']")
+    public WebElement unitPerPiece;
+
+    @FindBy(xpath = "//input[@id='minorderqtytr']")
+    public WebElement minOrderQuantity;
 
 
 
