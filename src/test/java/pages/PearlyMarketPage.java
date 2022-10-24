@@ -717,6 +717,19 @@ public class PearlyMarketPage {
 
 
 
+    //follewers bolumu
+
+    @FindBy (xpath = "//span[@class='text'][normalize-space()='Followers']")
+    public WebElement followerss;
+
+    @FindBy (xpath = "(//th[contains(text(),'Name')])[2]")
+    public WebElement followerssName;
+
+    @FindBy (xpath = "(//th[contains(text(),'Email')])[2]")
+    public WebElement followerssEmail;
+
+    @FindBy (xpath = "(//th[contains(text(),'Actions')])[2]")
+    public WebElement followersActions;
 
 
 
@@ -1726,8 +1739,6 @@ public class PearlyMarketPage {
 
 
     //Kenan Agca
-
-
 
 
 
