@@ -620,6 +620,30 @@ public class PearlyMarketPage {
 
 
 
+    //us004
+
+
+
+    @FindBy(xpath = "//button[@class='single_add_to_cart_button button alt']")
+    public WebElement sepeteEkleButton;
+
+
+    @FindBy(xpath = "//tr[@class='woocommerce-shipping-totals shipping'][1]")
+    public WebElement shippingg;
+
+    @FindBy(xpath = "(//*[@class='cart-title'])[2]")
+    public WebElement subTotal;
+
+
+    @FindBy(xpath = "//*[@class='woocommerce-billing-fields__field-wrapper row gutter-sm']")
+    public WebElement billingDetails;
+
+    @FindBy(xpath = "//a[@class='cart-toggle']//i[@class='w-icon-cart']")
+    public WebElement sepetim;
+
+    @FindBy(xpath = "(//a[normalize-space()='View cart'])[1]")
+    public WebElement sepetiGoruntule;
+
 
 
 
