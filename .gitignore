@@ -1,3 +1,10 @@
-
+.idea
+*.iml
+*.target
+*.html
+*.generated-test-sources
+*.Rapor
+*.Screenshots
+*.test-classes
 
 
