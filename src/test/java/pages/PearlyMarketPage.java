@@ -131,382 +131,7 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //Vendor Registiration
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Filiz Yilmaz
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -650,54 +275,6 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Sena Yucedal
 
 
@@ -755,157 +332,68 @@ public class PearlyMarketPage {
     @FindBy (xpath = "(//th[contains(text(),'Actions')])[2]")
     public WebElement followersActions;
 
+    //US018
 
+    @FindBy(xpath = "(//*[@class='form-control'])[1]")
+    public WebElement aramaKutusu;
 
+    @FindBy(xpath = "//*[@class='woocommerce-LoopProduct-link woocommerce-loop-product__link']")
+    public WebElement hopeCupNew;
 
+    @FindBy(xpath = "//*[@class='single_add_to_cart_button button alt']")
+    public WebElement sepeteEkleNew;
 
+    @FindBy(xpath = "//*[@class='btn btn-success btn-md']")
+    public WebElement sepetimK;
 
+    @FindBy(xpath = "//*[@href='https://pearlymarket.com/checkout-2/']")
+    public WebElement proceedToCheckout;
 
+    @FindBy(xpath = "//*[@id='place_order']")
+    public WebElement odeme;
 
+    @FindBy(xpath = "//*[@href='https://pearlymarket.com/my-account-2/orders/']")
+    public WebElement listeyeDon;
 
+    @FindBy(xpath = "//*[@href='https://pearlymarket.com/store-manager/']")
+    public WebElement store;
 
 
+    @FindBy(xpath = "//span[normalize-space()='Orders']")
+    public WebElement ordersK;
 
+    @FindBy(xpath = "//tbody/tr[1]/td[9]/a[2]/span[1]")
+    public WebElement viewDetails;
 
+    @FindBy(xpath = "(//button[normalize-space()='Update'])[1]")
+    public WebElement uptade;
 
+    @FindBy(xpath = "(//a[contains(text(),'My Account')])[1]")
+    public WebElement myAccountNew;
 
+    @FindBy(xpath = "(//a[contains(text(),'Orders')])[1]")
+    public WebElement ordersNew;
 
+    @FindBy(xpath = "(//a[normalize-space()='Support'])[1]")
+    public WebElement supportK;
 
+    @FindBy(xpath = "//textarea[@id='wcfm_support_query']")
+    public WebElement issues;
 
+    @FindBy(xpath = "(//input[@id='wcfm_support_submit_button'])[1]")
+    public WebElement submitNew;
 
+    @FindBy(xpath = " (//span[@class='wcfmfa fa-retweet text_tip'])[1]]")
+    public WebElement refundRequest;
 
+    @FindBy(xpath = "(//textarea[@id='wcfm_refund_reason'])[1]")
+    public WebElement refundRequestReason;
 
+    @FindBy(xpath = "(//input[@id='wcfm_refund_requests_submit_button'])[1]")
+    public WebElement submitNewButton;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//span[normalize-space()='Refund']")
+    public WebElement refundButton;
 
 
 
@@ -991,183 +479,6 @@ public class PearlyMarketPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Zeynep Sarikaya
 
     @FindBy (xpath = "(//*[text()='Sign In'])[1]")
@@ -1227,7 +538,6 @@ public class PearlyMarketPage {
 
     @FindBy (xpath = "//*[@id='wcfm-reviews']")
     public WebElement reviewTable;
-
 
 
 
