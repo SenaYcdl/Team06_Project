@@ -23,12 +23,13 @@ public class US001_Test {
 
 
     @Test
-    public void US001_Test_T00(){
+    public void US001_TC_001() {
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
         //Register butonunu navigate et ve tıkla
-        pearly.register.click();
+        pearly.registerr.click();
         //Become a Vendor butonunu navigate et ve tıkla
         pearly.becomeVendor.click();
+        Assert.assertTrue(pearly.becomeAVendor.isDisplayed());
         ReusableMethods.waitFor(3);
         String marketHandle = Driver.getDriver().getWindowHandle();
         Driver.getDriver().switchTo().newWindow(WindowType.WINDOW).get("https://www.fakemail.net");
@@ -78,7 +79,7 @@ public class US001_Test {
         js.executeScript("arguments[0].click();", notnow);
     }
     @Test
-    public void registerControlTest(){ //smokeTest
+    public void US001_TC_002(){ //smokeTest
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
 
@@ -91,7 +92,7 @@ public class US001_Test {
         Assert.assertTrue(pearly.userEmail.isEnabled());
         Assert.assertTrue(pearly.userEmail.isDisplayed());
         ReusableMethods.waitFor(3);
-        Assert.assertTrue(pearly.password.isEnabled());
+        Assert.assertTrue(pearly.passwordd.isEnabled());
         Assert.assertTrue(pearly.password.isDisplayed());
         ReusableMethods.waitFor(3);
         Assert.assertTrue(pearly.confirmPass.isEnabled());
@@ -101,14 +102,14 @@ public class US001_Test {
     }
 
     @Test
-    public void emptyMailTest(){ //smokeTest
+    public void US001_TC_003(){ //smokeTest
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
         js.executeScript("arguments[0].click();", pearly.pearlyRegister);
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys(" ");
-        pearly.password.sendKeys(ConfigReader.getProperty("pearlyPassword"));
+        pearly.passwordd.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         ReusableMethods.waitFor(3);
         pearly.confirmPass.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -119,14 +120,14 @@ public class US001_Test {
     }
 
     @Test //negatifSmokeTest
-    public void wrongMailControl(){
+    public void US001_TC_004(){
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
         js.executeScript("arguments[0].click();", pearly.pearlyRegister);
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("shYUISHJDKMJh");
-        pearly.password.sendKeys(ConfigReader.getProperty("pearlyPassword"));
+        pearly.passwordd.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         ReusableMethods.waitFor(3);
         pearly.confirmPass.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         ReusableMethods.waitFor(3);
@@ -137,14 +138,14 @@ public class US001_Test {
     }
 
     @Test
-    public void uniqueMailControl(){ //smokeTest
+    public void US001_TC_005(){ //smokeTest
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
         js.executeScript("arguments[0].click();", pearly.pearlyRegister);
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys(ConfigReader.getProperty("pearlyEmail"));
-        pearly.password.sendKeys(ConfigReader.getProperty("pearlyPassword"));
+        pearly.passwordd.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         pearly.confirmPass.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -156,14 +157,14 @@ public class US001_Test {
     }
 
     @Test
-    public void strongPassControl1(){ //kucukharf olmadan
+    public void US001_TC_008(){ //kucukharf olmadan
 
         Driver.getDriver().get(ConfigReader.getProperty("pearlyUrl"));
         js.executeScript("arguments[0].click();", pearly.pearlyRegister);
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("sena.ycdl61@gmail.com");
-        pearly.password.sendKeys("123G");
+        pearly.passwordd.sendKeys("123G");
         pearly.confirmPass.sendKeys("123G");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -183,7 +184,7 @@ public class US001_Test {
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("sena.ycdl61@gmail.com");
-        pearly.password.sendKeys("123a*");
+        pearly.passwordd.sendKeys("123a*");
         pearly.confirmPass.sendKeys("123a*");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -203,7 +204,7 @@ public class US001_Test {
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("sena.ycdl61@gmail.com");
-        pearly.password.sendKeys("Hello");
+        pearly.passwordd.sendKeys("Hello");
         pearly.confirmPass.sendKeys("Hello");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -222,7 +223,7 @@ public class US001_Test {
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("sena.ycdl61@gmail.com");
-        pearly.password.sendKeys("123aA");
+        pearly.passwordd.sendKeys("123aA");
         pearly.confirmPass.sendKeys("123Aa");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -241,7 +242,7 @@ public class US001_Test {
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys("sena.ycdl61@gmail.com");
-        pearly.password.sendKeys("Hello01");
+        pearly.passwordd.sendKeys("Hello01");
         pearly.confirmPass.sendKeys("Hello01");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
@@ -259,7 +260,7 @@ public class US001_Test {
         ReusableMethods.waitFor(5);
         js.executeScript("arguments[0].click();", pearly.becomeAVendor);
         pearly.userEmail.sendKeys(ConfigReader.getProperty("pearlyEmail"));
-        pearly.password.sendKeys(ConfigReader.getProperty("pearlyPassword"));
+        pearly.passwordd.sendKeys(ConfigReader.getProperty("pearlyPassword"));
         pearly.confirmPass.sendKeys("123456");
         ReusableMethods.waitFor(3);
         js.executeScript("arguments[0].click();", pearly.registerButton);
