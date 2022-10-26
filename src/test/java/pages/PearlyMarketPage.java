@@ -19,19 +19,20 @@ public class PearlyMarketPage {
     //Tugba Gunes
 
     @FindBy(xpath = "//*[@class='register inline-type']")
-    public WebElement register;
+    public WebElement registerr;
     @FindBy(xpath = "(//*[@href='https://pearlymarket.com/vendor-register/'])[2]")
     public WebElement becomeVendor;
     @FindBy(xpath = "//*[@id='user_email']")
-    public WebElement email;
+    public WebElement emaill;
     @FindBy(xpath = "//*[@id='passoword']")
-    public WebElement password;
+    public WebElement passwordd;
     @FindBy(xpath = "//*[@name='password_strength']")
     public WebElement strongSifre;
     @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
     public WebElement girisYapilamadi;
-    @FindBy(xpath = "//*[text()='Sign In']")
+    @FindBy(xpath = "//span[normalize-space()='Sign In']")
     public WebElement signİn;
+
     //US002
     @FindBy(xpath = "//*[@class='woocommerce-Input woocommerce-Input--text input-text']")
     public WebElement signİnEmail;
@@ -41,9 +42,6 @@ public class PearlyMarketPage {
     public WebElement signİnButton;
     @FindBy(xpath = "//*[text()='Sign Out']")
     public WebElement signOut;
-
-    @FindBy(xpath = "(//*[text()='My Account'])[3]")
-    public WebElement myAccount;
 
     @FindBy(css = ".woocommerce-MyAccount-navigation")
     public List<WebElement> dashboardList;
@@ -83,12 +81,6 @@ public class PearlyMarketPage {
 
     @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
     public WebElement errorEmail;
-
-    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
-    public WebElement strongPasswordMessage;
-
-    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-success']")
-    public WebElement successEmailMessage;
 
     @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
     public WebElement atleastGood;
@@ -630,18 +622,6 @@ public class PearlyMarketPage {
     @FindBy(xpath = "(//*[text()='Description'])[1]")
     public WebElement descriptionVisible;
 
-    @FindBy(xpath = "//input[@id='user_email']")
-    public WebElement email;
-
-    @FindBy(xpath = "(//*[@href='https://pearlymarket.com/vendor-register/'])[2]")
-    public WebElement becomeVendor;
-
-    @FindBy(xpath ="//*[@id='passoword']")
-    public WebElement password2;
-
-    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
-    public WebElement girisYapilamadi;
-
     @FindBy(xpath = "//*[text()='Sign In']")
     public WebElement signn;
 
@@ -1107,8 +1087,7 @@ public class PearlyMarketPage {
     public WebElement myAccount;
     @FindBy (xpath = "//*[text()='Store Manager']")
     public WebElement storeManager;
-    @FindBy (xpath = "(//*[@class='wcfm_menu_item '])[4]")
-    public WebElement orders;
+
     @FindBy (xpath = "//*[@id='wcfm-orders_info']")
     public WebElement resultOrders;
     @FindBy (xpath = "(//*[@class='text'])[4]")
@@ -1121,8 +1100,6 @@ public class PearlyMarketPage {
     public WebElement shippingAddress;
     @FindBy (xpath = "//*[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account']")
     public WebElement accountDetails;
-    @FindBy (xpath = "//*[@id='account_first_name']")
-    public WebElement firstName;
     @FindBy (xpath = "//*[@id='account_last_name']")
     public WebElement lastName;
     @FindBy (xpath = "//*[@id='account_display_name']")

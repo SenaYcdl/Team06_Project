@@ -38,7 +38,8 @@ public class US003_Test{
         js.executeScript("arguments[0].click();", orders);
         ReusableMethods.getActions().sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(2);
-        pearly.goShop.click();
+        WebElement goshop=Driver.getDriver().findElement(By.xpath("//*[@class='btn btn-dark btn-rounded btn-icon-right continue-shopping mb-4 mt-6']"));
+        js.executeScript("arguments[0].click();",goshop);
         Faker faker = new Faker();
 
         for (int i = 0; i < pearly.conList.size(); i++) {
